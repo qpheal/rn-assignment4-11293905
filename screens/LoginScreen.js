@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import {
   Button,
   SafeAreaView,
@@ -9,8 +8,17 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import React, { useState } from 'react';
 
-export default function App() {
+export default function LoginScreen() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleLogin = () => {
+    navigation.navigate('HomeScreen', { name, email });
+  };
+
   return (
     <SafeAreaView
       style={{ flex: 1, justifyContent: "center", marginHorizontal: "8%" }}
@@ -43,19 +51,28 @@ export default function App() {
         </View>
 
         <View style={{ gap: 15 }}>
-          <TextInput
-            placeholder="Name"
-            style={{
-              borderWidth: 1,
-              paddingHorizontal: 10,
-              paddingVertical: 7,
-              borderRadius: 10,
-              borderBlockColor: "#AFB0B6",
-              borderColor: "#afb0b6",
-            }}
-          />
+          <View>
+            <TextInput
+              placeholder="Name"
+              value={name}
+              onChangeText={setName}
+              style={{
+                borderWidth: 1,
+                paddingHorizontal: 10,
+                paddingVertical: 7,
+                borderRadius: 10,
+                borderBlockColor: "#AFB0B6",
+                borderColor: "#afb0b6",
+                width: 'auto',
+                height: 40,
+              }}
+            />
+          </View>
+
           <TextInput
             placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
             style={{
               borderWidth: 1,
               paddingHorizontal: 10,
@@ -73,6 +90,7 @@ export default function App() {
               borderRadius: 25,
               padding: 40,
             }}
+            onPress={handleLogin}
           />
         </View>
 
@@ -92,43 +110,43 @@ export default function App() {
           <View style={{ flex: 1, height: 1, backgroundColor: "#ddd" }}></View>
         </View>
 
-        <View style={{ flexDirection: "row", justifyContent: "center", marginTop: -5}}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            marginTop: -5,
+          }}
+        >
           <TouchableOpacity>
-            <Image source={require("./assets/Group 56.png")} />
+            <Image source={require("../assets/Group 56.png")} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require("./assets/Group 55.png")} />
+            <Image source={require("../assets/Group 55.png")} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require("./assets/Group 54.png")} />
+            <Image source={require("../assets/Group 54.png")} />
           </TouchableOpacity>
         </View>
 
         <View
-          style={{flexDirection: 'row',
+          style={{
+            flexDirection: "row",
             justifyContent: "center",
             alignContent: "center",
             alignItems: "center",
-            marginTop: -10
+            marginTop: -10,
           }}
         >
           <Text style={{ textAlign: "center", color: "#BDBEC2" }}>
-            Haven't an account?  
+            Haven't an account?
           </Text>
           <TouchableOpacity>
-              <Text style={{ color: "#0000ff" }}> Register</Text>
-            </TouchableOpacity>
+            <Text style={{ color: "#0000ff" }}> Register</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+
