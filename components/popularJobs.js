@@ -47,4 +47,20 @@ export const popularJobs = [
         salary: '$86,000/y',
         state: 'Florida, US'
     },
+    {   
+        id:7,
+        logo: require('../assets/Vector (1).png'),
+        role: "Junior Executive",
+        company: 'Burger KIng',
+        salary: '$86,000/y',
+        state: 'Francisco, US'
+    },
+    {   
+        id:8,
+        logo: require('../assets/Group.png'),
+        role: "Junior Executive",
+        company: 'Burger KIng',
+        salary: '$86,000/y',
+        state: 'Florida, US'
+    },
 ]

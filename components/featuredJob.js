@@ -11,7 +11,7 @@ export const featuredJobs = [
   {
     id: 2,
     logo: require("../assets/Group 54.png"),
-    description: "Software Engineering",
+    description: "Full Stack",
     platform: "Facebook",
     salary: "18,000",
     location: "Accra, Ghana",
@@ -20,7 +20,7 @@ export const featuredJobs = [
   {
     id: 3,
     logo: require("../assets/Group 54.png"),
-    description: "Software Engineering",
+    description: "AI",
     platform: "Facebook",
     salary: "18,000",
     location: "Accra, Ghana",
@@ -29,7 +29,43 @@ export const featuredJobs = [
   {
     id: 4,
     logo: require("../assets/Group 54.png"),
-    description: "Software Engineering",
+    description: "Machine Learning",
+    platform: "Facebook",
+    salary: "18,000",
+    location: "Accra, Ghana",
+    backgroundColor: "red"
+  },
+  {
+    id: 5,
+    logo: require("../assets/Group 54.png"),
+    description: "Telecom",
+    platform: "Facebook",
+    salary: "18,000",
+    location: "Accra, Ghana",
+    backgroundColor: "blue"
+  },
+  {
+    id: 6,
+    logo: require("../assets/Group 54.png"),
+    description: "Full Stack",
+    platform: "Facebook",
+    salary: "18,000",
+    location: "Accra, Ghana",
+    backgroundColor: "red"
+  },
+  {
+    id: 7,
+    logo: require("../assets/Group 54.png"),
+    description: "React DevOps",
+    platform: "Facebook",
+    salary: "18,000",
+    location: "Accra, Ghana",
+    backgroundColor: "violet"
+  },
+  {
+    id: 8,
+    logo: require("../assets/Group 54.png"),
+    description: "UI Designer",
     platform: "Facebook",
     salary: "18,000",
     location: "Accra, Ghana",

@@ -1,7 +1,6 @@
 import {
   Button,
   SafeAreaView,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -10,13 +9,13 @@ import {
 } from "react-native";
 import React, { useState } from 'react';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleLogin = () => {
-    navigation.navigate('HomeScreen', { name, email });
+    navigation.navigate('Home', { name, email });
   };
 
   return (

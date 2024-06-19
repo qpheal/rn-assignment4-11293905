@@ -14,6 +14,7 @@ import { popularJobs } from "../components/popularJobs";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function HomeScreen({ route }) {
+  const { name, email } = route.params;
   return (
     <SafeAreaView
       style={{ flex: 1, marginHorizontal: "5%", marginVertical: "12%" }}
@@ -28,11 +29,11 @@ export default function HomeScreen({ route }) {
             }}
           >
             <View>
-              <Text style={{ fontSize: 24 }}>Eric Appah</Text>
+              <Text style={{ fontSize: 24 }}>{name}</Text>
               <Text
                 style={{ fontSize: 20, fontWeight: "400", color: "#95969D" }}
               >
-                ericappah@gmail.com
+                {email}
               </Text>
             </View>
             <View>
